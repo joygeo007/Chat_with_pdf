@@ -11,7 +11,7 @@ import streamlit as st
 
 EXTRACTED_TEXT_FILE_PATH = "pdf_text.txt" # text extracted from pdf
 EXTRACTED_JSON_PATH = "extracted.json" # snippets and embeddings
-OPENAI_API_KEY = st.secrets("OPENAI")#"sk-proj-QZ0dcGXN1l89JwEmQzXOT3BlbkFJxDduyUsfDNE7e3cO91U8"#"use own API token" # replace this with your openai api key or store the api key in env
+OPENAI_API_KEY = st.secrets["OPENAI"]#"sk-proj-QZ0dcGXN1l89JwEmQzXOT3BlbkFJxDduyUsfDNE7e3cO91U8"#"use own API token" # replace this with your openai api key or store the api key in env
 EMBEDDING_MODEL = "text-embedding-ada-002" # embedding model used
 
 GPT_MODEL = "gpt-3.5-turbo-0125" # gpt model used. alternatively you can use gpt-4 or other models.
