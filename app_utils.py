@@ -18,7 +18,7 @@ GPT_MODEL = "gpt-3.5-turbo-0125" # gpt model used. alternatively you can use gpt
 CHUNK_SIZE = 1000 # chunk size to create snippets
 CHUNK_OVERLAP = 200 # check size to create overlap between snippets
 CONFIDENCE_SCORE = 0.75 # specify confidence score to filter search results. [0,1] prefered: 0.75
-K=5 #max number of relevant snippets to consider
+K=8 #max number of relevant snippets to consider
 pdf_description = """ User Guide"""
 
 
