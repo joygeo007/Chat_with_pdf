@@ -35,18 +35,18 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         # React to user input
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input("Your question"):
     # Display user message in chat message container
     with st.chat_message("user"):
         st.markdown(prompt)
-    # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": prompt})
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": prompt})
 
+    with st.spinner("Thinking..."):
+        response = answer_users_question(prompt)
     
-    response = answer_users_question(prompt)
-    
-    # Display assistant response in chat message container
-    with st.chat_message("assistant"):
-        st.markdown(response)
-    # Add assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": response})
+        # Display assistant response in chat message container
+        with st.chat_message("assistant"):
+            st.markdown(response)
+            # Add assistant response to chat history
+            st.session_state.messages.append({"role": "assistant", "content": response})
