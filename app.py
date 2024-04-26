@@ -24,7 +24,7 @@ create_embeddings()
 
 
 import streamlit as st
-st.title("Pdf Query Bot")
+st.title("Helper Bot")
 
 # Initialize chat history
 if "messages" not in st.session_state:
